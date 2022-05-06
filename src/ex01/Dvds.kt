@@ -1,4 +1,12 @@
 package ex01
 
-class Dvds(nome: String, preco: Double, codigoDebarra: Long) : ItensLoja(nome, preco, codigoDebarra)
-}it.equals(dvd2.codigodebarras)
+class Dvds(nome: String, preco: Double, codigoDeBarras: Int, private val duracao: Int): Item(nome, preco, codigoDeBarras) {
+    override fun mostrarDetalhesDoItem() {
+        println("Nome do DVD: $nome;")
+        println("Preço do DVD: $preco;")
+        println("Código de Barras: $codigoDeBarras;")
+        println("Duração do DVD: $duracao.")
+        println("----###----###----###----###----###----")
+        println()
+    }
+}
